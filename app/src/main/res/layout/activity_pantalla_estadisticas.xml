@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/green_2"
+    tools:context=".Estadistica_view">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Estado de huerta y consumos"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="228dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="280dp"
+        android:text="Desde: 01-23 Jul, 2023"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.echo.holographlibrary.PieGraph
+        android:id="@+id/graphGeneral"
+        android:layout_width="227dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/bttnGeneral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="70dp"
+        android:backgroundTint="@color/Green_p"
+        android:text="Ver reporte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/graphGeneral"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/bttnHuerta"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/Green_p"
+        android:text="Estado de huerta"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bttnEnergia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.763"
+        app:layout_constraintStart_toEndOf="@+id/graphGeneral"
+        app:layout_constraintTop_toBottomOf="@+id/graphGeneral"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/bttnAgua"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="77dp"
+        android:backgroundTint="@color/Green_p"
+        android:text="Cons. Agua"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toEndOf="@+id/graphGeneral"
+        app:layout_constraintTop_toBottomOf="@+id/bttnEnergia"
+        app:layout_constraintVertical_bias="0.012" />
+
+    <Button
+        android:id="@+id/bttnEnergia"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="70dp"
+        android:backgroundTint="@color/Green_p"
+        android:text="Cons. Energia"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.763"
+        app:layout_constraintStart_toEndOf="@+id/graphGeneral"
+        app:layout_constraintTop_toBottomOf="@+id/bttnHuerta" />
+
+    <com.echo.holographlibrary.LineGraph
+        android:id="@+id/lineHuerta"
+        android.id="@+id/LineaGrafica"
+        android:layout_width="183dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/bttnHuerta"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/porcHuerta" />
+
+    <com.echo.holographlibrary.LineGraph
+        android:id="@+id/lineEnergia"
+        android.id="@+id/LineaGrafica"
+        android:layout_width="183dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/bttnHuerta"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineHuerta" />
+
+    <com.echo.holographlibrary.LineGraph
+        android:id="@+id/lineAgua"
+        android.id="@+id/LineaGrafica"
+        android:layout_width="183dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bttnHuerta"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineEnergia"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <TextView
+        android:id="@+id/porcHuerta"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:text="Huerta"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/porcEner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/graphGeneral"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/porcAgua"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="Agua"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/porcEner"
+        app:layout_constraintTop_toBottomOf="@+id/graphGeneral"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/porcEner"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="Energia"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/porcAgua"
+        app:layout_constraintStart_toEndOf="@+id/porcHuerta"
+        app:layout_constraintTop_toBottomOf="@+id/graphGeneral" />
+</androidx.constraintlayout.widget.ConstraintLayout>
